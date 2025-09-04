@@ -1,0 +1,19 @@
+resources:
+  jobs:
+    job_hhchang_01:
+      name: job_hhchang_01
+      queue:
+        enabled: true
+
+      tasks:
+        - task_key: task_01
+          notebook_task:
+            notebook_path: notebook_hhchang_01
+            source: GIT
+      git_source:
+        git_url: https://github.com/planitdeveloper/dbsources.git
+        git_provider: gitHub
+        git_branch: user_hhchang
+      queue:
+        enabled: true
+      performance_target: STANDARD
